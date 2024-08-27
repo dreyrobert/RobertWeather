@@ -1,6 +1,6 @@
 @php
     use Carbon\Carbon;
-    Carbon::setLocale('pt_BR'); // Define o locale para português brasileiro
+    Carbon::setLocale('pt_BR');
 @endphp
 
 <div class="h-[480px] w-[360px] bg-white rounded-lg flex flex-col items-center justify-end">
@@ -18,7 +18,7 @@
             <p class="text-sm text-[#6B6B6B] font-bold">{{ $data['current']['weather_descriptions'][0] }}</p>
         </div>
         <div>
-            <img src="{{ asset('icons/113.png') }}" alt="Clima" class="w-[50px] h-[50px]">
+            <img src="{{ asset('icons/' . ($data['current']['is_day'] == 'yes' ? 'day' : 'night') . '/' . $data['current']['weather_code'] . '.svg') }}" alt="Clima" class="w-[50px] h-[50px]">
         </div>
     </div>
 </div>
