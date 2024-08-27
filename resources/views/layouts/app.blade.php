@@ -18,9 +18,9 @@
                 <a class="font-light hover:font-medium text-xl pr-3 pl-3" href="{{ route('weather-compare') }}">Comparador de Clima</a>
             </li>
         </ul>
-        <button class="btn-primary">
+        <a class="btn-primary" href="{{ route('history-log') }}">
             Histórico
-        </button>
+        </a>
     </nav>
     @yield('content')
 </body>
