@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+    @apply bg-gradient-to-r from-[#3A5E72] to-[#5C93B1] rounded-lg flex items-center justify-center pt-3 pb-3 pr-5 pl-5 text-xl font-medium text-white;
+}
