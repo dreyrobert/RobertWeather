@@ -26,7 +26,7 @@ class WeatherController extends Controller
             }
         }
 
-        $apiKey = '210a8b8a96be435155b2c54a53279657';
+        $apiKey = env('API_KEY');
         $apiUrl = 'http://api.weatherstack.com/current';
 
         $response = Http::get($apiUrl, [
