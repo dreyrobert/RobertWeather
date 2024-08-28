@@ -7,9 +7,9 @@
     <div class="text-center pt-10 pb-10">
         <h2 class="text-3xl font-bold text-white">Comparando climas com o <span class="bg-gradient-to-r from-[#CAECFF] to-[#78CFFF] text-transparent bg-clip-text">Robert Weather!</span></h2>
     </div>
-    <form id="weather-compare-form" action="{{ route('weather.compare') }}" method="GET" class="flex flex-row gap-x-5">
-        <input type="text" name="first-city" id="first-city" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Primeiro Município">
-        <input type="text" name="second-city" id="second-city" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Segundo Município">
+    <form id="weather-compare-form" action="{{ route('weather.compare') }}" method="GET" class="flex lg:flex-row lg:gap-x-5 flex-col gap-y-5">
+        <input type="text" name="first-city" id="first-city" class="rounded-lg pr-5 pl-5 p-3 bg-[#24343D] text-white" placeholder="Primeiro Município">
+        <input type="text" name="second-city" id="second-city" class="rounded-lg pr-5 pl-5 p-3 bg-[#24343D] text-white" placeholder="Segundo Município">
         <button type="submit" class="btn-primary">Comparar</button>
     </form>
     @if($errors->any())
@@ -22,7 +22,7 @@
         </div>
     @endif
     @if(isset($weatherData) && is_array($weatherData))
-        <div class="flex flex-row pt-20 overflow-x-auto gap-x-10">
+        <div class="flex lg:flex-row flex-col pt-20 overflow-x-auto lg:gap-x-10 gap-y-10 items-center">
             @foreach($weatherData as $data)
                 @php
                     $bg = 'bg-'.rand(1, 3);
@@ -41,7 +41,7 @@
         var firstCity = document.getElementById('first-city').value.trim();
         var secondCity = document.getElementById('second-city').value.trim();
 
-        if (!city && !cep) {
+        if (!firstCity || !secondCity) {
             alert('Por favor, preencha os dois municípios.');
             event.preventDefault();
         }

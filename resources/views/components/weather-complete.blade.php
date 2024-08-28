@@ -1,4 +1,4 @@
-<div class="flex flex-row gap-x-10">
+<div class="flex lg:flex-row flex-col lg:gap-x-10 gap-y-10 pb-10 lg:pb-0">
     @php
         $bg = 'bg-'.rand(1, 3);
     @endphp

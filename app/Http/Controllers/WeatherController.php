@@ -51,7 +51,7 @@ class WeatherController extends Controller
         $firstCity = $request->input('first-city');
         $secondCity = $request->input('second-city');
 
-        if (empty($firstCity || $secondCity)) {
+        if (empty($firstCity ) || empty($secondCity)) {
             return redirect()->back()->withErrors(['message' => 'Preencha os dois campos.']);
         }
 

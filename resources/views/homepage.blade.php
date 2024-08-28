@@ -4,12 +4,12 @@
 
 @section('content')
 <div class="w-full flex flex-col items-center justify-center">
-    <div class="w-[500px] text-center pt-10 pb-10">
+    <div class="w-[500px] text-center p-10 lg:p-0 lg:mb-10">
         <h2 class="text-3xl font-bold text-white">Vendo o clima de todo o mundo com o <span class="bg-gradient-to-r from-[#CAECFF] to-[#78CFFF] text-transparent bg-clip-text">Robert Weather!</span></h2>
     </div>
-    <form id="weather-form" action="{{ route('weather.search') }}" method="GET" class="flex flex-row gap-x-5">
-        <input type="text" name="city" id="city" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Município">
-        <input type="text" name="cep" id="cep" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Digite o CEP">
+    <form id="weather-form" action="{{ route('weather.search') }}" method="GET" class="flex lg:flex-row flex-col lg:gap-x-5 gap-y-5">
+        <input type="text" name="city" id="city" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white p-3" placeholder="Município">
+        <input type="text" name="cep" id="cep" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white p-3" placeholder="Digite o CEP">
         <button type="submit" class="btn-primary">Buscar</button>
     </form>
     @if($errors->any())
@@ -23,7 +23,7 @@
     @endif
     @if(isset($weatherData) && is_array($weatherData))
         <div class="bg-1 bg-2 bg-3 hidden"></div>
-        <div class="flex flex-row pt-20 overflow-x-auto">
+        <div class="flex lg:flex-row flex-col pt-20 overflow-x-auto">
             @foreach($weatherData as $data)
                 <x-weather-complete :data="$data" />
             @endforeach
