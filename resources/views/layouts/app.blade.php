@@ -10,7 +10,7 @@
 <body class="bg-black-homepage bg-cover bg-center lg:bg-no-repeat w-full h-screen">
     <nav class="flex flex-wrap items-center justify-between p-6 text-white">
         <div class="flex items-center flex-shrink-0">
-            <h2 class="text-4xl font-semibold">Robert Weather</h2>
+            <h2 class="lg:text-4xl text-2xl font-semibold">Robert Weather</h2>
         </div>
         <div class="block lg:hidden">
             <button class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-400 hover:border-gray-400" onclick="toggleMenu()">
