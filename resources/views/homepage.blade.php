@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home Page')
+@section('title', 'Robert Weather')
 
 @section('content')
 <div class="w-full flex flex-col items-center justify-center">
@@ -9,7 +9,7 @@
     </div>
     <form id="weather-form" action="{{ route('weather.search') }}" method="GET" class="flex flex-row gap-x-5">
         <input type="text" name="city" id="city" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Município">
-        <input type="text" name="cep" id="cep" class="rounded-lg pr-5 pl-5 bg-[#24343D]" placeholder="Digite o CEP">
+        <input type="text" name="cep" id="cep" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white" placeholder="Digite o CEP">
         <button type="submit" class="btn-primary">Buscar</button>
     </form>
     @if($errors->any())
@@ -22,9 +22,10 @@
         </div>
     @endif
     @if(isset($weatherData) && is_array($weatherData))
+        <div class="bg-1 bg-2 bg-3 hidden"></div>
         <div class="flex flex-row pt-20 overflow-x-auto">
             @foreach($weatherData as $data)
-                <x-weather :data="$data" />
+                <x-weather-complete :data="$data" />
             @endforeach
         </div>
     @endif

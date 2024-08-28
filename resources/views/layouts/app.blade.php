@@ -7,7 +7,7 @@
     <title>@yield('title', 'Default Title')</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-black-homepage bg-cover bg-center bg-no-repeat w-full">
+<body class="bg-black-homepage bg-cover bg-center bg-no-repeat w-full h-screen">
     <nav class="flex flex-row justify-around p-10 items-center text-white">
         <h2 class="text-4xl font-semibold">Robert Weather</h2>
         <ul class="flex justify-between">
@@ -18,7 +18,7 @@
                 <a class="font-light hover:font-medium text-xl pr-3 pl-3" href="{{ route('weather-compare') }}">Comparador de Clima</a>
             </li>
         </ul>
-        <a class="btn-primary" href="{{ route('history-log') }}">
+        <a class="btn-primary" href="{{ route('weather.list') }}">
             Histórico
         </a>
     </nav>
