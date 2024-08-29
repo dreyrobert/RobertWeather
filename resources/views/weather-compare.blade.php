@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home Page')
+@section('title', 'Comparador de Climas')
 
 @section('content')
 <div class="w-full flex flex-col items-center justify-center">
