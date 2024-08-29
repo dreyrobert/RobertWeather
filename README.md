@@ -57,7 +57,6 @@ cp .env.example .env
 ```
 
 Coloque seu código de acesso à API do Weather Stack em API_URL no arquivo .env
-```
 
 Criação as tabelas do banco de dados com as migrações esquemas:
 
