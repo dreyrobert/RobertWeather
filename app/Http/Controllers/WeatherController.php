@@ -14,10 +14,9 @@ class WeatherController extends Controller
         $cep = $request->input('cep');
 
         if (empty($city)) {
-            $cepUrl = 'https://viacep.com.br/ws/' . $cep . '/json/';
+            $cepUrl = 'http://viacep.com.br/ws/' . $cep . '/json/';
 
-            // Erro no Curl com verificação de SSL
-            $cepResponse = Http::withoutVerifying()->get($cepUrl);
+            $cepResponse = Http::get($cepUrl);
             
             $cepData = $cepResponse->json();
             $city = $cepData['localidade'] ?? null;

@@ -5,12 +5,17 @@
 @section('content')
     <div class="container mx-auto p-4 rounded-lg">
         <h2 class="font-semibold text-white text-2xl pb-5">Histórico de Busca</h2>
+
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="w-full p-2 rounded border border-gray-300" placeholder="Buscar...">
+        </div>
+
         @if($weatherData->isEmpty())
             <p class="text-gray-600">Nenhum dado disponível.</p>
         @else
         <div class="max-h-[70vh] overflow-y-auto">
             <div class="overflow-x-auto">
-                <table class="min-w-full rounded-lg">
+                <table class="min-w-full rounded-lg" id="dataTable">
                     <thead class="text-white bg-[#24343D] rounded-lg">
                         <tr class="text-left rounded-lg">
                             <th class="py-2 px-4 border-b font-light">Data/Hora</th>
@@ -44,4 +49,28 @@
         </div>
         @endif
     </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            table = document.getElementById('dataTable');
+            tr = table.getElementsByTagName('tr');
+            
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = 'none';
+                td = tr[i].getElementsByTagName('td');
+                for (var j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            tr[i].style.display = '';
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 @endsection
