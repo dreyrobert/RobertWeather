@@ -54,7 +54,7 @@ Crie o arquivo `.env` a partir do arquivo `.env.example` gerado automaticamente 
 cp .env.example .env
 ```
 
-Coloque seu código de acesso à API do Weather Stack em API_URL no arquivo .env
+Coloque seu código de acesso à API do Weather Stack em API_KEY no arquivo .env
 
 Por fim execute o comando abaixo para a geração da chave de autenticação da aplicação:
 
