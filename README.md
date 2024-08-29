@@ -19,10 +19,10 @@ Feito a instalação das dependências, é necessário obter uma cópia do proje
 Para isso, rode:
 
 ```
-git clone https://github.com/dreyrobert/RobertWeather.git && RobertWeather
+git clone https://github.com/dreyrobert/RobertWeather.git
 ```
 
-Isso criará e trocará para a pasta com o código do projeto.
+Isso criará a pasta com o código do projeto. Após isso, entre na pasta.
 
 #### 2.1 PHP
 
@@ -32,15 +32,7 @@ Instale as dependências do PHP usando o comando abaixo:
 composer install
 ```
 
-#### 2.2 Banco de Dados
-
-O banco de dados é o PostgreSQL. Para criar uma base usando esse SGBD, rode:
-
-```
-touch database/database.sqlite
-```
-
-#### 2.3 Node
+#### 2.2 Node
 
 Instale também as dependências do NodeJS executando:
 
@@ -48,7 +40,7 @@ Instale também as dependências do NodeJS executando:
 npm install
 ```
 
-#### 2.4 Laravel
+#### 2.3 Laravel
 
 Crie o arquivo `.env` a partir do arquivo `.env.example` gerado automaticamente pelo Laravel:
 
@@ -58,17 +50,23 @@ cp .env.example .env
 
 Coloque seu código de acesso à API do Weather Stack em API_URL no arquivo .env
 
-Criação as tabelas do banco de dados com as migrações esquemas:
-
-```
-php artisan migrate
-```
-
 Por fim execute o comando abaixo para a geração da chave de autenticação da aplicação:
 
 ```
 php artisan key:generate
 ```
+
+#### 2.4 Banco de Dados
+
+O banco de dados é o PostgreSQL. Lembre de criar uma database para o projeto e a configurar no arquivo .env.
+
+Criação das tabelas do banco de dados com as migrações esquemas:
+
+```
+php artisan migrate
+```
+
+#### Recursos Javascript e CSS
 
 Gere os recursos JavaScript e CSS:
 
