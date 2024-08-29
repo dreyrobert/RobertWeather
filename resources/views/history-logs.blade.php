@@ -6,13 +6,12 @@
     <div class="container mx-auto p-4 rounded-lg">
         <h2 class="font-semibold text-white text-2xl pb-5">Histórico de Busca</h2>
 
-        <div class="mb-4">
-            <input type="text" id="searchInput" class="w-full p-2 rounded border border-gray-300" placeholder="Buscar...">
-        </div>
-
         @if($weatherData->isEmpty())
             <p class="text-gray-600">Nenhum dado disponível.</p>
         @else
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="rounded-lg pr-5 pl-5 bg-[#24343D] text-white p-3" placeholder="Buscar Município...">
+        </div>
         <div class="max-h-[70vh] overflow-y-auto">
             <div class="overflow-x-auto">
                 <table class="min-w-full rounded-lg" id="dataTable">
