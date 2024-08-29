@@ -8,13 +8,16 @@ No Back-End, implementamos um controller central, responsável por gerenciar as 
 A interface do usuário foi inicialmente projetada no [FIGMA](https://www.figma.com/design/s52ypYz5xxiNexnDVo7tRZ/Robert-Weather), a partir de um protótipo disponibilizado pela comunidade. Fiz adaptações no design para atender aos requisitos específicos do projeto.
 
 Aqui podemos verificar o funcionamento da página inicial, onde conseguimos consultar o clima de um local específico.
-![Homepage](./gifs/homepage2.gif)
+
+![Homepage](./gifs/homepage.gif)
 
 Depois, podemos conferir as buscas feitas inidividualemnte a partir do botão "Histórico".
+
 ![Histórico](./gifs/historico.gif)
 
 Além disso, temos a página para comparar o clima entre dois municípios.
-![Comparador de Climas](./gifs/comparacao.gif)
+
+![Comparador de Climas](./gifs/comparador.gif)
 
 ## 🚀 Começando
 
