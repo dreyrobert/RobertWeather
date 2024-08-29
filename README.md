@@ -1,6 +1,8 @@
 # Robert Weather
 Aplicativo que permite aos usuários consultar as condições climáticas em tempo real de qualquer município ao redor do mundo. Utilizando a API da WeatherStack, o aplicativo oferece uma interface amigável onde é possível também comparar as condições climáticas entre duas localidades diferentes, bem como revisitar as condições climáticas de municípios pesquisados anteriormente.
 
+Neste projeto, foi utilizado o Blade para renderizar informações nas views, bem como o Tailwind para estilizar de forma mais facil os elementos que compõem o Front-End. No back, criamos apenas um controller que é responsável pelas rotas mais significativas do projeto, como a conexão com a API externa e população do Banco de Dados. A interface foi feita anteriormente no [FIGMA](https://www.figma.com/design/s52ypYz5xxiNexnDVo7tRZ/Robert-Weather) com a utilização de um protótipo disponibilizado pela comunidade e alterado por mim para comportar alguns requisitos do projeto.
+
 ## 🚀 Começando
 
 ### 1. Dependências
